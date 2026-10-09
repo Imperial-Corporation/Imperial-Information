@@ -1,0 +1,179 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background: #0d1117;
+    color: #e6edf3;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 100px 20px 80px;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #0d1117
+    );
+
+    border-bottom: 1px solid #30363d;
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 10px;
+
+    color: #8b949e;
+    font-size: 1.2rem;
+}
+
+main {
+    width: min(1000px, 90%);
+    margin: 60px auto;
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+section > h2 {
+    margin-bottom: 30px;
+
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+:root {
+    --background: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+
+    --text: #e6edf3;
+    --muted: #8b949e;
+
+    --blue: #58a6ff;
+    --green: #56d364;
+    --yellow: #d29922;
+    --red: #f85149;
+    --light_red:#ff7f7f
+}
+
+.team,
+.projects,
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 20px;
+}
+
+.member,
+.project,
+.contact {
+    padding: 25px;
+
+    background: #161b22;
+
+    border: 1px solid #30363d;
+    border-radius: 12px;
+
+    transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.member:hover,
+.project:hover,
+.contact:hover {
+    transform: translateY(-4px);
+    border-color: #58a6ff;
+}
+
+.member h3,
+.project h3,
+.contact h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.member p,
+.contact p {
+    margin: 5px 0;
+
+    color: #8b949e;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.status {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+}
+
+.development {
+    background: #1f3b2c;
+    color: #56d364;
+}
+
+.planned {
+    background: #3b321f;
+    color: #d29922;
+}
+
+.warning {
+    padding: 15px 20px;
+
+    background: var(--red);
+    color: var(--light_red);
+
+    border: 1px solid #806000;
+    border-radius: 8px;
+}
+.error {
+    background: #3b1616;
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+.info {
+    background: #172b3d;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+.success {
+    background: #16351f;
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    color: #8b949e;
+
+    border-top: 1px solid #30363d;
+}
